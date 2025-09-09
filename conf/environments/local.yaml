@@ -1,18 +1,7 @@
-# Local development paths (write to ./data)
 paths:
-  raw_excel: "./data/raw_excel_files"
-  bronze_csv: "./data/bronze_csv_files"
-  bronze_delta: "./data/bronze_delta"
-  silver_delta: "./data/silver_delta"
-  gold_delta: "./data/gold_delta"
-
-spark:
-  app_name: "lakehouse-local"
-  # If you use local S3 (minio) add appropriate fs.s3a configs in framework/spark_session.py
-
-glue:
-  # Not used locally, but kept for a consistent interface
-  database: "dev_lakehouse"
-  region: "us-east-1"
-  version: "5.0"
-  role: ""
+  raw_excel: data/raw_excel_files
+  bronze_csv: data/bronze_csv_files
+  logs: logs
+excel:
+  first_sheet_only: false
+  encoding: "utf-8-sig"
