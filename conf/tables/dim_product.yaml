@@ -1,0 +1,34 @@
+table: dim_product
+layer: bronze
+description: "Product dimension (English column names)"
+source:
+  format: csv
+  location_ref: bronze_csv   # key in environments/*/paths
+  filename_glob: "products*.csv"
+schema:
+  columns:
+    - name: product_id
+      source: 商品ID
+      type: string
+      nullable: false
+      description: "Unique product id"
+    - name: product_name
+      source: 商品名
+      type: string
+      nullable: false
+      description: "Product display name (English)"
+    - name: category
+      source: カテゴリ
+      type: string
+      nullable: true
+      description: "Category"
+    - name: brand
+      source: メーカー
+      type: string
+      nullable: true
+      description: "Brand"
+keys: [product_id]
+partitions: []
+options:
+  header: true
+  inferSchema: false

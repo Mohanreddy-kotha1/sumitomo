@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Data & artifacts
+data/bronze_csv_files/**
+data/bronze_delta/**
+data/silver_delta/**
+data/gold_delta/**
+*.log
+
+# IDE
+.vscode/
+.idea/

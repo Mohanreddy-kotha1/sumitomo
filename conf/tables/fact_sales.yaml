@@ -1,0 +1,37 @@
+table: fact_sales
+layer: silver
+description: "Sales fact built from Bronze CSVs and joins"
+source:
+  format: delta
+  location_ref: bronze_delta
+  # If fact originates from multiple bronze sources, read via SQL in sql/silver/
+schema:
+  columns:
+    - name: sales_id
+      source: 売上ID
+      type: string
+      nullable: false
+      description: "Sales row id"
+    - name: product_id
+      source: 商品ID
+      type: string
+      nullable: false
+      description: "Product id FK"
+    - name: quantity
+      source: 数量
+      type: int
+      nullable: false
+      description: "Quantity"
+    - name: price
+      source: 価格
+      type: double
+      nullable: false
+      description: "Unit price"
+    - name: sales_date
+      source: 売上日
+      type: date
+      nullable: false
+      description: "Order date"
+keys: [sales_id]
+partitions: ["sales_date"]
+options: {}

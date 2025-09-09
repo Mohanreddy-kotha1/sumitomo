@@ -1,0 +1,11 @@
+table: sales_summary
+layer: gold
+description: "Reporting-ready sales summary joined with product dimension"
+source:
+  format: delta
+  location_ref: silver_delta
+schema:
+  columns: []  # defined by SQL
+keys: []
+partitions: ["sales_date"]
+options: {}
