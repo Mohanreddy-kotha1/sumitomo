@@ -1,0 +1,8 @@
+# Minimal local requirements (you may pin versions as needed)
+pandas
+openpyxl
+PyYAML
+boto3
+pyspark
+delta-spark
+click

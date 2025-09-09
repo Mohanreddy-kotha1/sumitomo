@@ -1,0 +1,16 @@
+# AWS production environment (edit placeholders)
+paths:
+  raw_excel: "s3://<your-prod-bucket>/raw/excel"
+  bronze_csv: "s3://<your-prod-bucket>/bronze/csv"
+  bronze_delta: "s3://<your-prod-bucket>/bronze/delta"
+  silver_delta: "s3://<your-prod-bucket>/silver/delta"
+  gold_delta: "s3://<your-prod-bucket>/gold/delta"
+
+spark:
+  app_name: "lakehouse-aws-prod"
+
+glue:
+  database: "prod_lakehouse"
+  region: "us-east-1"
+  version: "5.0"
+  role: "arn:aws:iam::<account-id>:role/<GlueJobRole>"
