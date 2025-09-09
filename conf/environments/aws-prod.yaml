@@ -1,4 +1,3 @@
-# AWS production environment (edit placeholders)
 paths:
   raw_excel: "s3://<your-prod-bucket>/raw/excel"
   bronze_csv: "s3://<your-prod-bucket>/bronze/csv"
