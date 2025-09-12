@@ -62,7 +62,7 @@ def read_csv_iter(csv_path: Path, encoding: str = "utf-8", chunksize: Optional[i
         keep_default_na=False,
         na_values=[],
         encoding=encoding,
-        sep=UNIT_SEP,          # <-- key fix
+        sep=UNIT_SEP, 
         engine="python",
         header=0
     )
